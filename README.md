@@ -5,9 +5,9 @@ API used:
 Coin Gecko API
 
 AWS Services used: 
-Lambda
-Dynamo DB
-AWS Cognito
-S3
-Event Bridge
-SES email service
+Lambda,
+Dynamo DB,
+AWS Cognito,
+S3,
+Event Bridge,
+SES email service.
