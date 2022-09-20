@@ -52,7 +52,7 @@ let ddbParams = {
                 "dynamodb:ListStreams"
             ],
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details/*"
+                "arn:aws:***********************"
             ]
         },
         {
@@ -70,14 +70,14 @@ let ddbParams = {
                 "dynamodb:Query",
                 "dynamodb:UpdateItem"
             ],
-            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details"
+            "Resource": "arn:**********************"
         },
         {
             "Sid": "DynamoDBDescribeLimitsAccess",
             "Effect": "Allow",
             "Action": "dynamodb:DescribeLimits",
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details"
+                "arn:aws:**********************"
             ]
         }
     ]
@@ -93,14 +93,6 @@ exports.handler = async (event, context) => {
     console.log(event);
 
     let date = new Date();
-
-    //const tableName = process.env.final-project-user-details;
-    //const region = process.env.eu.west-1;
-   // const defaultAvi = 'https://YOUR/DEFAULT/IMAGE';
-    
-   // console.log("table=" + tableName + " -- region=" + region);
-
-   // aws.config.update({region: region});
 
     // If the required parameters are present, proceed
     if (event.request.userAttributes.sub) {

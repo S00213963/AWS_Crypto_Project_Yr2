@@ -17,14 +17,14 @@ policy
             "Action": [
                 "s3:GetObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-bitcoin/*"
+            "Resource": "***********************"
         },
         {
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-bitcoin/*"
+            "Resource": "***********************"
         },
         {
             "Sid": "DynamoDBIndexAndStreamAccess",
@@ -38,7 +38,7 @@ policy
                 "dynamodb:ListStreams"
             ],
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB/*"
+                "arn:***********************"
             ]
         },
         {
@@ -56,14 +56,14 @@ policy
                 "dynamodb:Query",
                 "dynamodb:UpdateItem"
             ],
-            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB"
+            "Resource": "arn:**********************"
         },
         {
             "Sid": "DynamoDBDescribeLimitsAccess",
             "Effect": "Allow",
             "Action": "dynamodb:DescribeLimits",
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB"
+                "arn:aws:**********************"
             ]
         }
     ]

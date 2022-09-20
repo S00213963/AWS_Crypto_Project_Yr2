@@ -21,14 +21,14 @@ write-bitcoin-data-to-dynamo-s3
             "Action": [
                 "s3:GetObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-cardano/*"
+            "Resource": "***********************"
         },
         {
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-cardano/*"
+            "Resource": "arn:***********************"
         },
         {
             "Sid": "DynamoDBIndexAndStreamAccess",
@@ -42,7 +42,7 @@ write-bitcoin-data-to-dynamo-s3
                 "dynamodb:ListStreams"
             ],
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-cardanoDB*"
+                "arn:aws:***********************"
             ]
         },
         {
@@ -60,14 +60,14 @@ write-bitcoin-data-to-dynamo-s3
                 "dynamodb:Query",
                 "dynamodb:UpdateItem"
             ],
-            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-cardanoDB"
+            "Resource": "arn:aws:**********************"
         },
         {
             "Sid": "DynamoDBDescribeLimitsAccess",
             "Effect": "Allow",
             "Action": "dynamodb:DescribeLimits",
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-cardanoDB"
+                "arn:aws:**********************"
             ]
         }
     ]

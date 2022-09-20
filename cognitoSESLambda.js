@@ -60,7 +60,7 @@ let ddbParams = {
                 "dynamodb:ListStreams"
             ],
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details/*"
+                "arn:aws:***********************"
             ]
         },
         {
@@ -78,14 +78,14 @@ let ddbParams = {
                 "dynamodb:Query",
                 "dynamodb:UpdateItem"
             ],
-            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details"
+            "Resource": "**********************"
         },
         {
             "Sid": "DynamoDBDescribeLimitsAccess",
             "Effect": "Allow",
             "Action": "dynamodb:DescribeLimits",
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-user-details"
+                "arn:aws:**********************"
             ]
         }
     ]

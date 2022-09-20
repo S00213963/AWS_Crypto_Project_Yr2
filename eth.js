@@ -19,14 +19,14 @@ policy
             "Action": [
                 "s3:GetObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-ethereum/*"
+            "Resource": "arn:***************//*"
         },
         {
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject"
             ],
-            "Resource": "arn:aws:s3:::final-project-ethereum/*"
+            "Resource": "arn:******************//*"
         },
         {
             "Sid": "DynamoDBIndexAndStreamAccess",
@@ -40,7 +40,7 @@ policy
                 "dynamodb:ListStreams"
             ],
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-ethereumDB/*"
+                "arn:***************************"
             ]
         },
         {
@@ -58,14 +58,14 @@ policy
                 "dynamodb:Query",
                 "dynamodb:UpdateItem"
             ],
-            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-ethereumDB"
+            "Resource": "arn:**********************"
         },
         {
             "Sid": "DynamoDBDescribeLimitsAccess",
             "Effect": "Allow",
             "Action": "dynamodb:DescribeLimits",
             "Resource": [
-                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-ethereumDB"
+                "arn:aws:**********************"
             ]
         }
     ]
