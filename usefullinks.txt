@@ -1,0 +1,83 @@
+ACL S3 error
+https://stackoverflow.com/questions/70333681/for-an-amazon-s3-bucket-deplolyent-from-guithub-how-do-i-fix-the-error-accesscon
+
+s3 read and write policy
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_s3_rw-bucket.html
+
+write to s3
+https://gist.github.com/navjotdhanawat/92f8683ddfc5bf99c6bd47ce6dedaa4e
+
+congnito lambda and dynamodb
+https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html#cognito-user-identity-pools-working-with-aws-lambda-triggers-using-lambda
+
+//old policy 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:PutLogEvents",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::final-project-bucket-2022/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::final-project-bucket-2022/*"
+        },
+        {
+            "Sid": "DynamoDBIndexAndStreamAccess",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:GetShardIterator",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:ListStreams"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB/*",
+                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-ethereumDB/*",
+                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-cardanoDB/*"
+            ]
+        },
+        {
+            "Sid": "DynamoDBTableAccess",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:PutItem",
+                "dynamodb:DescribeTable",
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB"
+        },
+        {
+            "Sid": "DynamoDBDescribeLimitsAccess",
+            "Effect": "Allow",
+            "Action": "dynamodb:DescribeLimits",
+            "Resource": [
+                "arn:aws:dynamodb:eu-west-1:821390823963:table/final-project-bitcoinDB"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.Lambda.Tutorial.html
+
+stackoverflow post
+https://stackoverflow.com/questions/71373223/trigger-lambda-function-based-on-attribute-value-in-dynamodb
+
+// streams article
+https://dev.to/aws-builders/new-dynamodb-streams-filtering-in-serverless-framework-3lc5
+https://dev.to/aws-builders/using-dynamodb-streams-and-lambda-in-your-serverless-applications-3epl
+
